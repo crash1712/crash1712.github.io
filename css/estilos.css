@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: fantasy;
+}  
+header{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        box-shadow: 0 4px 25px -22px black;
+        z-index: 2;
+    }
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h1 img{
+    height: 65px;
+    width: 165px;
+}
+.menu{ 
+    height: 80px;
+}
+.menu nav{
+    height: 100%;
+}
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.menu nav ul li a{ 
+    color: #777;
+    transition: color 300ms;
+}
+.menu nav ul li a:hover{
+    color: #aa168a;
+}
+/* aqui empieza la portada maldito birolo*/
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 0px;
+    background-image: url(../img/portada.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+.container-cover:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 32, 54, 0.63);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.container-info-cover h1{
+    font-size: 50px;
+    font-weight: 500px;
+    color: seashell;
+    margin-bottom: 20px;
+}
+.container-info-cover h2{
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 500px;
+    color:  rgb(151, 148, 148);
+    margin-bottom: 20px;
+}
+.container-info-cover p{
+    font-size: 20px;
+    font-weight: 300px;
+    color: seashell;
+}
+.nota{
+    font-size: 18px;
+    font-weight: 250px;
+    color: rgb(158, 158, 158);
+    font-family: cursive;
+}
+/*aqui empieza el pequeño contenido de la pagina*/
+.conteiner-infopag{
+    color: #fff;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    font-size: 21px;
+}
+.conteiner-infopag hr{
+    max-width: 1200px;
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #9190907a; 
+}
+.conteiner-infopag h1{
+    text-align: left;
+    color:rgb(255, 255, 255);
+}
+/* aqui empieza el fondo de burbuja */
+.animacion{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background: #1e2333 
+}
+.burbuja{
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+    position: absolute;
+    bottom: -150;
+    animation: burbujas 3s linear infinite;
+}
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7;
+}
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 3s;
+    animation-delay: 6;
+}
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1;
+}
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5;
+}
+.burbuja:nth-child(7){
+    width: 28px;
+    height: 28px;
+    left: 59%;
+    animation-duration: 4s;
+    animation-delay: 5;
+}
+.burbuja:nth-child(8){
+    width: 100px;
+    height: 100px;
+    left: 36%;
+    animation-duration: 5s;
+    animation-delay: 5;
+}.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 28%;
+    animation-duration: 4s;
+    animation-delay: 2;
+}.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 67%;
+    animation-duration: 3s;
+    animation-delay: 4;
+}
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+/* aqui empiezan las tablas de alumnos */
+.list-conteiner ol {
+    position: relative;
+    width: auto;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 35px;
+    font-size: 20px;
+}
+.list-conteiner ol li{
+    color: rgb(119, 116, 116);
+}
+.list-conteiner ol li a{
+    color: rgb(119, 116, 116);
+}
+.conteiner-p{
+    position: relative;
+    padding-top: 19px;
+    font-size: 28;
+    color: #7c3737;
+}
+/* En costruccion */
+.foto-de-construccion table{
+    position: sticky;
+    position: -webkit-sticky;
+    padding-top: 9px;
+    padding-left: 38%;
+}
+/*footer*/
+.container-footer{
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+.container-footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #9190907a; 
+}
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+.container-footer footer img{
+    margin-top: 10px;
+    width: 100px;
+}
+.container-footer footer .redes-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.container-footer footer .redes-footer .iconredesfooter{
+    font-size: 15px;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-footer footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #7a7a7a7a;
+}
+.container-footer h4{
+    text-align: center;
+    margin-top: 40px;
+    color: darkgray;
+    font-weight: 500;
+}
+
